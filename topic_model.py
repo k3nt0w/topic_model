@@ -49,14 +49,14 @@ class TopicModel():
         self.alpha = alpha
         self.beta  = beta
 
-        self.D = self.train_BOWs.shape[0] #学習に使う文書数
+        self.D = self.train_BOWs.shape[0]
         self.test_D = self.test_BOWs.shape[0]
 
-        self.N_dk = np.zeros([self.D, self.K]) #トピックkを振られた文書数
-        self.N_kv = np.zeros([self.K, self.V]) # トピックkに割り振られている語彙vの数
-        self.N_k  = np.zeros([self.K, 1]) #文書集合全体でトピックkを振られた単語数
+        self.N_dk = np.zeros([self.D, self.K])
+        self.N_kv = np.zeros([self.K, self.V])
+        self.N_k  = np.zeros([self.K, 1])
 
-        self.z_dn = np.zeros([self.D, max_words]) - 1 # 文書dのn番目の単語に割り振られてたトピック
+        self.z_dn = np.zeros([self.D, max_words]) - 1 
 
     def fit(self, epoch=100):
 
