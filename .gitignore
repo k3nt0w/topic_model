@@ -1,1 +1,5 @@
 *.csv
+*.npy
+*.ipynb
+.DS_Srore
+.ipynb*
